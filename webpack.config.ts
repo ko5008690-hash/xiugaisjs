@@ -81,10 +81,16 @@ function parse_configuration(entry: Entry): (_env: any, argv: any) => webpack.Co
           return `<style>${style}</style>`;
         },
       }),
+<<<<<<< HEAD
       new VueLoaderPlugin(),
     );
   }
   plugins.push({ apply: watch_it });
+=======
+    );
+  }
+  plugins.push({ apply: watch_it }, new VueLoaderPlugin());
+>>>>>>> a9c1be20659bc922bbf7ecf78c8386916ed9fac8
 
   return (_env, argv) => ({
     experiments: {

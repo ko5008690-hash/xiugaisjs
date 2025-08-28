@@ -17,4 +17,10 @@
   "[scss]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+<<<<<<< HEAD
+=======
+  "[vue]": {
+    "editor.defaultFormatter": "Vue.volar"
+  }
+>>>>>>> a9c1be20659bc922bbf7ecf78c8386916ed9fac8
 }
