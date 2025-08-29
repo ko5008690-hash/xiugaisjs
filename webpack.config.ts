@@ -81,10 +81,16 @@ function parse_configuration(entry: Entry): (_env: any, argv: any) => webpack.Co
           return `<style>${style}</style>`;
         },
       }),
+<<<<<<< HEAD
       new VueLoaderPlugin(),
     );
   }
   plugins.push({ apply: watch_it });
+=======
+    );
+  }
+  plugins.push({ apply: watch_it }, new VueLoaderPlugin());
+>>>>>>> 28b9ac03a886a445c482a18ae90a7118806377fb
 
   return (_env, argv) => ({
     experiments: {
@@ -247,7 +253,11 @@ function parse_configuration(entry: Entry): (_env: any, argv: any) => webpack.Co
           request.startsWith('-') ||
           request.startsWith('.') ||
           request.startsWith('/') ||
+<<<<<<< HEAD
           request.startsWith('@') ||
+=======
+          request.startsWith('@/') ||
+>>>>>>> 28b9ac03a886a445c482a18ae90a7118806377fb
           request.startsWith('http') ||
           path.isAbsolute(request) ||
           fs.existsSync(path.join(context, request)) ||
@@ -257,10 +267,19 @@ function parse_configuration(entry: Entry): (_env: any, argv: any) => webpack.Co
         }
 
         const builtin = {
+<<<<<<< HEAD
           lodash: '_',
           toastr: 'toastr',
           yaml: 'YAML',
           jquery: '$',
+=======
+          jquery: '$',
+          lodash: '_',
+          toastr: 'toastr',
+          vue: 'Vue',
+          'vue-router': 'VueRouter',
+          yaml: 'YAML',
+>>>>>>> 28b9ac03a886a445c482a18ae90a7118806377fb
           zod: 'z',
         };
         if (request in builtin) {
